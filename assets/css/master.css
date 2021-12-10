@@ -1,4 +1,7 @@
 .navbar {
-  background-color: transparent; }
+  background-color: transparent;
+  min-height: 80px; }
+  .navbar .navbar-brand img {
+    height: 70px; }
 
 /*# sourceMappingURL=master.css.map */
