@@ -4,5 +4,14 @@
   box-shadow: 0px 5px 5px rgba(51, 51, 51, 0.15); }
   .navbar .navbar-brand img {
     height: 70px; }
+  .navbar .nav-link {
+    color: #333;
+    transition: .5s; }
+    .navbar .nav-link:hover {
+      color: #1e88e5; }
+
+header {
+  min-height: 800px;
+  background-color: #1e88e5; }
 
 /*# sourceMappingURL=master.css.map */

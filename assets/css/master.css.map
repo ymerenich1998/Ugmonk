@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,OAAO;EACL,gBAAgB,EAAE,KAAK;EACvB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,kCAA6B;EAEvC,yBAAG;IACD,MAAM,EAAE,IAAI",
-"sources": ["particles/_navbar.scss"],
+"mappings": "AAAA,OAAO;EACL,gBAAgB,EAAE,KAAK;EACvB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,kCAA6B;EAEvC,yBAAG;IACD,MAAM,EAAE,IAAI;EAGhB,iBAAS;IACP,KAAK,ECTD,IAAI;IDUR,UAAU,EAAE,GAAG;IACf,uBAAO;MACL,KAAK,ECVU,OAAO;;ACH5B,MAAM;EACJ,UAAU,EAAE,KAAK;EACjB,gBAAgB,EDCG,OAAO",
+"sources": ["particles/_navbar.scss","variables/_params.scss","particles/_header.scss"],
 "names": [],
 "file": "master.css"
 }
