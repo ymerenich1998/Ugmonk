@@ -11,7 +11,7 @@ html{
 body{
   max-width: 1440px;
   background-color: #FFFFFF;
-  margin: 0;
+  margin: 0 auto;
 }
 header{
   display: flex;
@@ -40,7 +40,24 @@ header .block_categories a{
   line-height: 20px;
   color: #2A2A2A;
   text-decoration: none;
-  padding-right: 32px;
+  margin-right: 32px;
+  position: relative;
+}
+header .block_categories a::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  width: 0px;
+  height: 2px;
+  background-color: #2A2A2A;
+  margin: auto;
+  transition: .5s;
+}
+header .block_categories a:hover::before{
+  width: 100%;
 }
 header .block_personal{
   padding-top: 43px;
@@ -126,17 +143,35 @@ header .block_personal .form .block_search .search_1{
   flex-flow: row nowrap;
   padding: 40px 0px 55px 213px;
 }
-.ugmonk_2 .classes_things .first_span{
-  color: #1A1A1A;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #1A1A1A;
-}
 .ugmonk_2 .classes_things span{
   display: block;
+  position: relative;
   font-size: 17px;
   line-height: 27px;
   color: #B3B3B3;
+  padding-bottom: 5px;
   margin-right: 48px;
+  transition: .3s;
+  cursor: pointer;
+}
+.ugmonk_2 .classes_things span:hover{
+  color: #1A1A1A;
+}
+.ugmonk_2 .classes_things span:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  width: 0px;
+  height: 2px;
+  background-color: #1A1A1A;
+  margin: auto;
+  transition: .3s;
+}
+.ugmonk_2 .classes_things span:hover:before{
+  width: 100%;
 }
 .ugmonk_2 .gallery_things{
   display: flex;
@@ -146,6 +181,12 @@ header .block_personal .form .block_search .search_1{
 .ugmonk_2 .gallery_things .card_things{
   width: 275px;
   height: 420px;
+}
+.ugmonk_2 .gallery_things .card_things:nth-child(12){
+  height: 438px;
+}
+.ugmonk_2 .gallery_things .card_things:nth-child(13){
+  height: 438px;
 }
 .ugmonk_2 .gallery_things .card_things:nth-child(4){
   position: relative;
@@ -203,6 +244,10 @@ header .block_personal .form .block_search .search_1{
   padding: 1px 61px;
   border: 1px solid #1A1A1A;
   margin: 65px auto 0px;
+  transition: .3s linear;
+}
+.ugmonk_2 .gallery_things  a:hover{
+  box-shadow: 0px 0px 8px 0px rgba(26, 26, 26, 1);
 }
 .ugmonk_3{
   width: inherit;
@@ -243,6 +288,7 @@ header .block_personal .form .block_search .search_1{
   background-color: #7E6E45;
   padding: 1px 31px;
   border: 1px solid #7E6E45;
+  cursor: pointer;
 }
 .ugmonk_3 .ugmonk_3_text .link{
   display: block;
@@ -250,6 +296,11 @@ header .block_personal .form .block_search .search_1{
   line-height: 22px;
   color: #F7F7F7;
   padding-top: 17px;
+  opacity: .5;
+  transition: .5s linear;
+}
+.ugmonk_3 .ugmonk_3_text .link:hover{
+  opacity: 1;
 }
 .ugmonk_4{
   width: inherit;
@@ -318,6 +369,7 @@ header .block_personal .form .block_search .search_1{
   color: #1A1A1A;
   padding: 7px 0px 1px 0px;
   border-bottom: 1px solid #1A1A1A;
+  cursor: pointer;
 }
 .ugmonk_5 .shop .card_people .mens{
   display: inline-block;
@@ -352,6 +404,11 @@ header .block_personal .form .block_search .search_1{
   text-decoration: none;
   border-bottom: 1px solid #FFFFFF;
   margin: auto;
+  opacity: .5;
+  transition: .5s linear;
+}
+.ugmonk_6 a:hover{
+  opacity: 1;
 }
 .ugmonk_7{
   width: inherit;
