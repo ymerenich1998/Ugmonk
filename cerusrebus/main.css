@@ -507,3 +507,20 @@ footer .footer_block_right .social_networks{
 footer .footer_block_right .social_networks img{
   padding-left: 16px;
 }
+
+/* Animation */
+
+.link_footer:hover{
+  animation: shake 1.2s ease-in-out;
+}
+@keyframes shake {
+  0%, 50%, 100%{
+    transform: rotate(0deg);
+  }
+  10%, 30%{
+    transform: rotate(-10deg);
+  }
+  20%, 40%{
+    transform: rotate(10deg);
+  }
+}
