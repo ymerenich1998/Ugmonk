@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 *,
 *::before,
 *::after {
@@ -5,9 +7,232 @@
 }
 
 html {
+  font: 16px/1.5 "Roboto", sans-serif;
+  color: rgba(42, 42, 42, 1);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:active {
+  transform: scale(0.95);
+}
+
+.container {
+  padding-inline: 8.75rem;
+}
+
+/* <---------------------- Main Content -> */
+
+/* <---------------------- Header -> */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 2rem 7.5rem 1rem;
+}
+
+.header .brand {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.header .brand .brand-name {
+  font-size: 37px;
+  color: rgba(26, 26, 26, 0.71);
+}
+
+.header .navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  list-style-type: none;
+  padding-inline: 0;
+}
+
+.header .user-panel {
+  padding: 0.5rem 0.5rem 0;
+  font-size: 15px;
+  border-right: 2px solid lightgray;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.header .user-panel .user-panel-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .user-panel .user-panel-links a {
+  margin-inline: 0.8rem;
+}
+.header .user-panel .user-panel-search {
+  padding: 10px;
+}
+.header .user-panel .user-panel-search input {
+  width: 100%;
+  min-height: 2.7em;
+  padding: 0.3rem;
+  border: 1px solid lightgray;
+}
+
+/* <---------------------- Main -> */
+
+.main .main-banner {
+  min-height: 600px;
+  padding-top: 30rem;
+  background: url("../images/banner-bg.png");
+  color: white;
+  line-height: 15px;
+}
+.main .main-banner p {
+  font-size: 18px;
+}
+.main .main-banner a {
+  display: inline-block;
+  padding-bottom: 0.25em;
+  font-size: 15px;
+  border-bottom: 2px solid white;
+}
+
+.main .menu .criteries-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  margin-block: 2.5rem 3.4rem;
+  font-size: 17px;
+}
+.main .menu .criteries-form input {
+  display: block;
+  width: 100%;
+  margin-inline: 0;
+  visibility: hidden;
+  position: relative;
+}
+.main .menu .criteries-form input::after {
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.main .menu .criteries-form input:checked::after {
+  visibility: initial;
+  width: 100%;
+}
+
+.main .menu .products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+
+  line-height: 15px;
+  font-size: 15px;
+}
+.main .menu .products .prev-price,
+.main .products .attribute {
+  color: gray;
+}
+.main .menu .products .discount {
+  color: rgba(255, 52, 81, 1);
+}
+.main .menu .btn {
+  display: block;
+  width: max-content;
+  margin: 6rem auto 10rem;
+  padding: 1rem 3.8rem;
+  font-size: 20px;
+  color: rgba(247, 247, 247, 1);
+  background-color: rgba(26, 26, 26, 1);
+  border: 1px solid #000;
+}
+.main .menu .btn:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.main .secondary-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 600px;
+  background: url("../images/secondary-banner-bg.png");
+  font-size: 15px;
+  color: rgba(247, 247, 247, 1);
+}
+.main .secondary-banner .title {
+  max-width: 50%;
+  font-size: 35px;
+  margin-bottom: 1.4rem;
+}
+.main .secondary-banner .btn {
+  width: max-content;
+  margin-bottom: 1.4rem;
+  padding: 0.5rem 2rem;
+  background-color: rgba(126, 110, 69, 1);
+}
+.main .secondary-banner a:not(.btn) {
+  display: inline-block;
+  width: max-content;
+  padding-bottom: 0.2em;
+
+  border-bottom: 2px solid white;
+}
+
+.main .tertiary-banner {
+  min-height: 600px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: rgba(49, 47, 46, 1);
+  font-size: 15px;
+}
+.main .tertiary-banner .inner-content {
+  min-height: 436px;
+  display: flex;
+}
+.main .tertiary-banner .inner-content {
+  max-width: 1160px;
+  min-height: 436px;
+  display: flex;
+
+  background-color: rgba(247, 247, 247, 1);
+}
+.main .tertiary-banner .inner-content .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-inline: 5.8rem;
+}
+.main .tertiary-banner .inner-content .info .title {
+  font-size: 38px;
+  margin-bottom: 0em;
+}
+.main .tertiary-banner .inner-content .info a {
+  display: inline-block;
+  width: max-content;
+  margin-top: 0.5rem;
+  padding-bottom: 0.1em;
+
+  border-bottom: 1px solid rgba(42, 42, 42, 1);
 }
