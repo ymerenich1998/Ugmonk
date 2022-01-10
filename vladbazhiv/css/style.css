@@ -25,12 +25,21 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 a:active {
   transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
 }
 
 .container {
   padding-inline: 8.75rem;
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 /* <---------------------- Main Content -> */
@@ -60,8 +69,11 @@ a:active {
   align-items: center;
   gap: 2rem;
 
-  list-style-type: none;
+  list-style: none;
   padding-inline: 0;
+}
+.header .navbar ul li a:hover {
+  text-decoration: underline gray 2px;
 }
 
 .header .user-panel {
@@ -90,21 +102,18 @@ a:active {
 
 /* <---------------------- Main -> */
 
-.main .main-banner {
+.main .primary-banner {
   min-height: 600px;
   padding-top: 30rem;
   background: url("../images/banner-bg.png");
   color: white;
-  line-height: 15px;
 }
-.main .main-banner p {
+.main .primary-banner p {
   font-size: 18px;
 }
-.main .main-banner a {
+.main .primary-banner a {
   display: inline-block;
-  padding-bottom: 0.25em;
   font-size: 15px;
-  border-bottom: 2px solid white;
 }
 
 .main .menu .criteries-form {
@@ -115,6 +124,9 @@ a:active {
 
   margin-block: 2.5rem 3.4rem;
   font-size: 17px;
+}
+.main .menu .criteries-form label {
+  cursor: pointer;
 }
 .main .menu .criteries-form input {
   display: block;
@@ -144,7 +156,7 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 
-  line-height: 15px;
+  line-height: 18px;
   font-size: 15px;
 }
 .main .menu .products .prev-price,
@@ -179,7 +191,6 @@ a:active {
   color: rgba(247, 247, 247, 1);
 }
 .main .secondary-banner .title {
-  max-width: 50%;
   font-size: 35px;
   margin-bottom: 1.4rem;
 }
@@ -192,30 +203,23 @@ a:active {
 .main .secondary-banner a:not(.btn) {
   display: inline-block;
   width: max-content;
-  padding-bottom: 0.2em;
-
-  border-bottom: 2px solid white;
 }
 
 .main .tertiary-banner {
   min-height: 600px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   background-color: rgba(49, 47, 46, 1);
   font-size: 15px;
 }
 .main .tertiary-banner .inner-content {
-  min-height: 436px;
-  display: flex;
-}
-.main .tertiary-banner .inner-content {
   max-width: 1160px;
   min-height: 436px;
   display: flex;
-
   background-color: rgba(247, 247, 247, 1);
+  overflow: hidden;
 }
 .main .tertiary-banner .inner-content .info {
   display: flex;
@@ -232,7 +236,108 @@ a:active {
   display: inline-block;
   width: max-content;
   margin-top: 0.5rem;
-  padding-bottom: 0.1em;
+}
 
-  border-bottom: 1px solid rgba(42, 42, 42, 1);
+.main .mission .title {
+  margin-block: 7rem 5rem;
+  font-size: 30px;
+  text-align: center;
+}
+.main .mission .link {
+  display: inline-block;
+  width: max-content;
+}
+.main .mission .mission-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem 5rem;
+}
+.main .mission .mission-cards .card:last-child {
+  grid-column-end: span 2;
+  margin-bottom: 7rem;
+}
+
+.main .about {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 15px;
+  background: url("../images/about-img.png");
+}
+.main .about .title {
+  font-size: 35px;
+  margin-bottom: 0rem;
+}
+
+.main .subscribe {
+  min-height: 443px;
+  background-color: rgba(206, 211, 202, 1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.main .subscribe .title {
+  font-size: 34px;
+  margin-bottom: 1.2rem;
+}
+.main .subscribe .form {
+  margin-top: 2.5rem;
+}
+.main .subscribe .form input {
+  height: 3rem;
+  margin-inline: 0;
+  padding-inline: 0;
+  border: 1px solid gray;
+}
+.main .subscribe .form input[type="email"] {
+  width: 30%;
+  padding: 1rem;
+  border-right: none;
+}
+.main .subscribe .form input[type="submit"] {
+  width: 5%;
+}
+.main .subscribe .form input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+/* <---------------------- Footer -> */
+
+.footer {
+  min-height: 359px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.footer ul.l-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.7rem 6rem;
+
+  padding-inline: 0;
+  list-style: none;
+}
+
+.footer .r-side {
+  text-align: right;
+}
+.footer .r-side .company {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.footer .r-side .company img {
+  max-height: 90px;
+}
+.footer .r-side .socials a:not(:last-child) {
+  margin-right: 1rem;
 }
